@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  overflow-x: hidden;
+  color: #334155;
+}
+
+/* ===========================
+   LOGIN & REGISTER PAGE
+=========================== */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed, #2563eb);
+}
+
+.box {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.box h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1e293b;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Scoped input — ONLY inside .box (login/register) */
+.box input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border: 1.5px solid #e2e8f0;
+  outline: none;
+  border-radius: 10px;
+  background: #f8fafc;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  color: #1e293b;
+}
+
+.box input:focus {
+  border-color: #6366f1;
+  background: #ffffff;
+}
+
+/* Scoped button — ONLY inside .box (login/register) */
+.box button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+.box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+.box p {
+  text-align: center;
+  margin-top: 18px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.box span {
+  color: #4f46e5;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.box span:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   DASHBOARD LAYOUT
+=========================== */
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #f1f5f9;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-right: 1px solid #1e293b;
+}
+
+/* ===========================
+   MAIN CONTENT AREA
+=========================== */
+
+.main {
+  flex: 1;
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  padding: 24px;
+  background: #f1f5f9;
+  min-height: 100vh;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+  width: 100%;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f1f5f9;
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   SECTION CONTAINERS
+=========================== */
+
+.section {
+  width: 100%;
+  background: white;
+  padding: 24px;
+  margin-top: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+  overflow-x: auto;
+}
+
+.section h2 {
+  margin-bottom: 18px;
+  font-size: 20px;
+  color: #1e293b;
+}
+
+/* ===========================
+   DASHBOARD KPI CARDS
+=========================== */
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+  color: #4f46e5;
+  text-align: left;
+}
+
+/* ===========================
+   ITEM GRID CARDS
+=========================== */
+
+.itemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.itemCard {
+  background: white;
+  color: #1e293b;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.itemCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  border-color: #c7d2fe;
+}
+
+/* ===========================
+   TABLE GLOBALS
+=========================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+table th,
+table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: left;
+  font-size: 13px;
+}
+
+/* ===========================
+   SCROLLBAR GLOBAL STYLING
+=========================== */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    padding: 28px 24px;
+  }
+}
